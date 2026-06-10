@@ -9,8 +9,32 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as NaturezaRouteImport } from './routes/natureza'
+import { Route as GourmandRouteImport } from './routes/gourmand'
+import { Route as FougereRouteImport } from './routes/fougere'
+import { Route as FloralRouteImport } from './routes/floral'
 import { Route as IndexRouteImport } from './routes/index'
 
+const NaturezaRoute = NaturezaRouteImport.update({
+  id: '/natureza',
+  path: '/natureza',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GourmandRoute = GourmandRouteImport.update({
+  id: '/gourmand',
+  path: '/gourmand',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FougereRoute = FougereRouteImport.update({
+  id: '/fougere',
+  path: '/fougere',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FloralRoute = FloralRouteImport.update({
+  id: '/floral',
+  path: '/floral',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +43,72 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/floral': typeof FloralRoute
+  '/fougere': typeof FougereRoute
+  '/gourmand': typeof GourmandRoute
+  '/natureza': typeof NaturezaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/floral': typeof FloralRoute
+  '/fougere': typeof FougereRoute
+  '/gourmand': typeof GourmandRoute
+  '/natureza': typeof NaturezaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/floral': typeof FloralRoute
+  '/fougere': typeof FougereRoute
+  '/gourmand': typeof GourmandRoute
+  '/natureza': typeof NaturezaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/floral' | '/fougere' | '/gourmand' | '/natureza'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/floral' | '/fougere' | '/gourmand' | '/natureza'
+  id: '__root__' | '/' | '/floral' | '/fougere' | '/gourmand' | '/natureza'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  FloralRoute: typeof FloralRoute
+  FougereRoute: typeof FougereRoute
+  GourmandRoute: typeof GourmandRoute
+  NaturezaRoute: typeof NaturezaRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/natureza': {
+      id: '/natureza'
+      path: '/natureza'
+      fullPath: '/natureza'
+      preLoaderRoute: typeof NaturezaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gourmand': {
+      id: '/gourmand'
+      path: '/gourmand'
+      fullPath: '/gourmand'
+      preLoaderRoute: typeof GourmandRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fougere': {
+      id: '/fougere'
+      path: '/fougere'
+      fullPath: '/fougere'
+      preLoaderRoute: typeof FougereRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/floral': {
+      id: '/floral'
+      path: '/floral'
+      fullPath: '/floral'
+      preLoaderRoute: typeof FloralRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,17 +121,11 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  FloralRoute: FloralRoute,
+  FougereRoute: FougereRoute,
+  GourmandRoute: GourmandRoute,
+  NaturezaRoute: NaturezaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
