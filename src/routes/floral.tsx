@@ -1,0 +1,35 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { AccordPage, type AccordData } from "../components/Accord";
+
+const data: AccordData = {
+  eyebrow: "Protótipo 01 · Roll-on 7,5 mL · 10%",
+  title: "Acorde Floral",
+  subtitle: "Conforto, estabilidade e acolhimento seguro.",
+  proposal:
+    "Criado para promover conforto emocional profundo, estabilizar o humor e trazer uma sensação imediata de acolhimento seguro.",
+  pyramid: {
+    top: [{ name: "OE Lavanda 40/42", detail: "frescor limpo" }],
+    heart: [
+      { name: "Hedione", detail: "derivado floral de jasmim, radiância e expansão" },
+      { name: "Álcool Feniletílico", detail: "Água de Rosas" },
+      { name: "OE Rosa-de-Damasco" },
+      { name: "OE Gerânio-Rosa Brasileiro" },
+      { name: "Salicilato de Benzila" },
+    ],
+    base: [
+      { name: "Galaxolide", detail: "musk amaciante" },
+      { name: "Linalool", detail: "ponte amadeirada macia" },
+    ],
+  },
+  use: "Aplicação nos pontos de pulsação. Aguarde 10 segundos e inale profundamente.",
+};
+
+export const Route = createFileRoute("/floral")({
+  head: () => ({
+    meta: [
+      { title: "Acorde Floral — Liech Parfums" },
+      { name: "description", content: "Conforto emocional e acolhimento seguro." },
+    ],
+  }),
+  component: () => <AccordPage data={data} />,
+});
