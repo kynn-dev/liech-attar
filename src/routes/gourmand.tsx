@@ -1,7 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { AccordPage, type AccordData } from "../components/Accord";
+import image from "../assets/accord-gourmand.jpg";
 
 const data: AccordData = {
+  image,
+  imageAlt:
+    "Cena íntima em luz de vela com tons âmbar e baunilha, aconchego luxuoso.",
+  poetic:
+    "Uma viagem instantânea à memória afetiva. Notas quentes de baunilha clássica, resinas douradas e um toque lúdico de doçura que aquecem a alma. Uma fragrância densa que sacia e conforta com a familiaridade de um abraço saudoso.",
   eyebrow: "Protótipo 03 · Roll-on 7,5 mL · 10%",
   title: "Acorde Gourmand",
   subtitle: "Nostalgia positiva e saciedade emocional.",
