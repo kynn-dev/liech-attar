@@ -1,7 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { AccordPage, type AccordData } from "../components/Accord";
+import image from "../assets/accord-natureza.jpg";
 
 const data: AccordData = {
+  image,
+  imageAlt:
+    "Floresta de pinheiros envolta em névoa, atmosfera de aterramento e silêncio.",
+  poetic:
+    "O silêncio da floresta na sua pele. Uma descida das folhas cítricas até as raízes úmidas de vetiver e madeiras nobres. Este acorde convida a mente a desacelerar, respirar fundo e descarregar o peso do mundo na terra.",
   eyebrow: "Protótipo 02 · Roll-on 7,5 mL · 10%",
   title: "Acorde Natureza",
   subtitle: "Forest bathing, aterramento e silêncio mental.",

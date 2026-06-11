@@ -1,7 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { AccordPage, type AccordData } from "../components/Accord";
+import image from "../assets/accord-floral.jpg";
 
 const data: AccordData = {
+  image,
+  imageAlt:
+    "Rosas em tons profundos sobre fundo escuro, evocando conforto e acolhimento.",
+  poetic:
+    "Um abraço engarrafado. A delicadeza aveludada das rosas e do gerânio se funde à pureza relaxante da lavanda, criando uma aura de proteção, conforto e estabilidade. Um convite para se sentir em casa, dentro de si mesmo.",
   eyebrow: "Protótipo 01 · Roll-on 7,5 mL · 10%",
   title: "Acorde Floral",
   subtitle: "Conforto, estabilidade e acolhimento seguro.",
