@@ -18,6 +18,8 @@ export interface AccordData {
   };
   technicalNote?: string;
   use?: string;
+  inci?: string;
+  allergens?: string;
   image: string;
   imageAlt: string;
 }
@@ -102,6 +104,33 @@ export function AccordPage({ data }: { data: AccordData }) {
           {data.use && (
             <Section title="Modo de Uso" delay={3}>
               <p className="text-sm leading-relaxed text-gold/85">{data.use}</p>
+            </Section>
+          )}
+
+          {(data.inci || data.allergens) && (
+            <Section title="Composição & Transparência" delay={3}>
+              <div className="space-y-4">
+                {data.inci && (
+                  <div>
+                    <h4 className="text-[10px] uppercase tracking-wider text-gold/50 mb-1">
+                      Ingredientes (Nomes INCI)
+                    </h4>
+                    <p className="text-xs leading-relaxed text-gold/75 font-mono break-all sm:break-normal">
+                      {data.inci}
+                    </p>
+                  </div>
+                )}
+                {data.allergens && (
+                  <div>
+                    <h4 className="text-[10px] uppercase tracking-wider text-gold/50 mb-1">
+                      Alérgenos Obrigatórios (ANVISA / IFRA)
+                    </h4>
+                    <p className="text-xs leading-relaxed text-gold/75 italic">
+                      {data.allergens}
+                    </p>
+                  </div>
+                )}
+              </div>
             </Section>
           )}
         </div>

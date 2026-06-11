@@ -27,6 +27,9 @@ const data: AccordData = {
       { name: "Galaxolide", detail: "musk amaciante, substitui o Habanolide na fixação" },
     ],
   },
+  use: "Aplicação nos pontos de pulsação. Aguarde 10 segundos e inale profundamente.",
+  inci: "Caprylic/Capric Triglyceride, Parfum (Fragrance), Citrus Aurantium Dulcis Peel Oil, Styrax Tonkinensis Resin Extract, Coumarin, Limonene, Benzyl Benzoate, Linalool.",
+  allergens: "Coumarin, Limonene, Benzyl Benzoate, Linalool.",
 };
 
 export const Route = createFileRoute("/gourmand")({

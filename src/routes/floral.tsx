@@ -28,6 +28,8 @@ const data: AccordData = {
     ],
   },
   use: "Aplicação nos pontos de pulsação. Aguarde 10 segundos e inale profundamente.",
+  inci: "Caprylic/Capric Triglyceride, Parfum (Fragrance), Lavandula Angustifolia Flower Oil, Pelargonium Graveolens Flower Oil, Rosa Damascena Flower Oil, Linalool, Benzyl Salicylate, Geraniol, Citronellol, Limonene, Citral, Eugenol, Farnesol.",
+  allergens: "Linalool, Benzyl Salicylate, Geraniol, Citronellol, Limonene, Citral, Eugenol, Farnesol.",
 };
 
 export const Route = createFileRoute("/floral")({

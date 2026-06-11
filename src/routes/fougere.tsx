@@ -32,6 +32,9 @@ const data: AccordData = {
       { name: "Etileno Brassilato" },
     ],
   },
+  use: "Aplicação nos pontos de pulsação. Aguarde 10 segundos e inale profundamente.",
+  inci: "Caprylic/Capric Triglyceride, Parfum (Fragrance), Lavandula Angustifolia Flower Oil, Limonene, Linalool, Coumarin, Citral, Geraniol.",
+  allergens: "Limonene, Linalool, Coumarin, Citral, Geraniol.",
 };
 
 export const Route = createFileRoute("/fougere")({

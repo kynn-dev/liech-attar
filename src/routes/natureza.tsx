@@ -27,6 +27,9 @@ const data: AccordData = {
       { name: "OE Vetiver" },
     ],
   },
+  use: "Aplicação nos pontos de pulsação. Aguarde 10 segundos e inale profundamente.",
+  inci: "Caprylic/Capric Triglyceride, Parfum (Fragrance), Citrus Aurantium Dulcis Peel Oil, Lavandula Angustifolia Flower Oil, Citrus Aurantium Amara Leaf/Twig Oil, Juniperus Virginiana Wood Oil, Vetiveria Zizanoides Root Oil, Limonene, Linalool, Geraniol, Citral.",
+  allergens: "Limonene, Linalool, Geraniol, Citral.",
 };
 
 export const Route = createFileRoute("/natureza")({
