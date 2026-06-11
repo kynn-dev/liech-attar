@@ -14,17 +14,17 @@ const data: AccordData = {
   proposal:
     "Criado para promover conforto emocional profundo, estabilizar o humor e trazer uma sensação imediata de acolhimento seguro.",
   pyramid: {
-    top: [{ name: "OE Lavanda 40/42", detail: "frescor limpo" }],
+    top: [{ name: "Lavanda Francesa", detail: "frescor limpo e relaxante" }],
     heart: [
-      { name: "Hedione", detail: "derivado floral de jasmim, radiância e expansão" },
-      { name: "Álcool Feniletílico", detail: "Água de Rosas" },
-      { name: "OE Rosa-de-Damasco" },
-      { name: "OE Gerânio-Rosa Brasileiro" },
-      { name: "Salicilato de Benzila" },
+      { name: "Jasmim Radiante", detail: "luminosidade e expansão suave" },
+      { name: "Orvalho de Rosas", detail: "delicadeza aquática e fresca" },
+      { name: "Absoluto de Rosa de Damasco", detail: "a rainha das flores, rica e aveludada" },
+      { name: "Gerânio-Rosa", detail: "toque verde floral que equilibra as emoções" },
+      { name: "Pétalas Solares", detail: "calor floral e conforto aveludado" },
     ],
     base: [
-      { name: "Galaxolide", detail: "musk amaciante" },
-      { name: "Linalool", detail: "ponte amadeirada macia" },
+      { name: "Almíscar Branco", detail: "carícia macia e sensação de abraço" },
+      { name: "Madeira Macia de Linho", detail: "sutil transição de conforto" },
     ],
   },
   use: "Aplicação nos pontos de pulsação. Aguarde 10 segundos e inale profundamente.",

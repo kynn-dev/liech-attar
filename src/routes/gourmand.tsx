@@ -14,17 +14,17 @@ const data: AccordData = {
   proposal:
     "Ativação do sistema límbico ligado à memória afetiva, evocando nostalgia positiva e saciedade emocional.",
   pyramid: {
-    top: [{ name: "OE Laranja Doce" }],
+    top: [{ name: "Zest de Laranja Doce", detail: "brilho cítrico e alegre de início" }],
     heart: [
-      { name: "Etil Maltol", detail: "algodão-doce" },
-      { name: "Cumarina", detail: "fava tonka" },
-      { name: "Aldeído C-18", detail: "cremosidade de coco" },
+      { name: "Açúcar Queimado", detail: "doçura lúdica de algodão-doce na infância" },
+      { name: "Fava Tonka", detail: "cremosidade amendoada e balsâmica" },
+      { name: "Creme de Coco Silvestre", detail: "textura aveludada e leitosa" },
     ],
     base: [
-      { name: "Vanilina" },
-      { name: "Absoluto Benjoim-do-Sião" },
-      { name: "Absoluto Tabaco-Chocolate" },
-      { name: "Galaxolide", detail: "musk amaciante, substitui o Habanolide na fixação" },
+      { name: "Baunilha Absoluta", detail: "calor doce, familiar e reconfortante" },
+      { name: "Resina de Benjoim do Sião", detail: "toque resinoso, quente e dourado como o âmbar" },
+      { name: "Cacau e Tabaco Louro", detail: "densidade complexa, rica e levemente defumada" },
+      { name: "Almíscar Acolhedor", detail: "maciez envolvente para longa fixação" },
     ],
   },
   use: "Aplicação nos pontos de pulsação. Aguarde 10 segundos e inale profundamente.",

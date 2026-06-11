@@ -15,16 +15,19 @@ const data: AccordData = {
     "Focado no Forest Bathing, aterramento (grounding) e redução de agitação mental.",
   pyramid: {
     top: [
-      { name: "Laranja Doce", detail: "fagulha cítrica que limpa a mente" },
-      { name: "OE Lavanda 40/42" },
-      { name: "OE Petitgrain" },
+      { name: "Laranja Doce", detail: "fagulha cítrica e radiante para clareza mental" },
+      { name: "Lavanda Silvestre", detail: "calma profunda e reconfortante" },
+      { name: "Petitgrain de Laranjeira", detail: "frescor verde de folhas e galhos esmagados" },
     ],
-    heart: [{ name: "Linalool" }, { name: "Cashmeran" }],
+    heart: [
+      { name: "Néctar de Flores Brancas", detail: "frescor herbal sutilmente adocicado" },
+      { name: "Veludo de Cashmere", detail: "textura tátil, aconchegante e mineral" },
+    ],
     base: [
-      { name: "ISO E Super" },
-      { name: "OE Cedro da Virgínia" },
-      { name: "Veramoss", detail: "musgo de carvalho" },
-      { name: "OE Vetiver" },
+      { name: "Madeira Aveludada", detail: "aura limpa, difusiva e envolvente" },
+      { name: "Cedro da Virgínia", detail: "solidez amadeirada de floresta antiga" },
+      { name: "Musgo de Carvalho", detail: "raízes úmidas e terra molhada pós-chuva" },
+      { name: "Vetiver Terroso", detail: "aterramento profundo de raízes secas" },
     ],
   },
   use: "Aplicação nos pontos de pulsação. Aguarde 10 segundos e inale profundamente.",
