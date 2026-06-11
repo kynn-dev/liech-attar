@@ -27,8 +27,6 @@ const data: AccordData = {
       { name: "OE Vetiver" },
     ],
   },
-  technicalNote:
-    "Substituição magistral de Lemongrass por Laranja Doce e Lavanda para manter o topo fresco e funcional.",
 };
 
 export const Route = createFileRoute("/natureza")({
