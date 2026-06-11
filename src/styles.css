@@ -1,0 +1,108 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-navy: var(--navy);
+  --color-deep-black: var(--deep-black);
+  --color-gold: var(--gold);
+  --font-display: "Cormorant Garamond", serif;
+  --font-sans: "Poppins", sans-serif;
+}
+
+:root {
+  --radius: 0.25rem;
+  --navy: #0F1626;
+  --deep-black: #1A1A17;
+  --gold: #F5E6C4;
+
+  --background: #0F1626;
+  --foreground: #F5E6C4;
+  --card: #1A1A17;
+  --card-foreground: #F5E6C4;
+  --popover: #1A1A17;
+  --popover-foreground: #F5E6C4;
+  --primary: #F5E6C4;
+  --primary-foreground: #0F1626;
+  --secondary: #1A1A17;
+  --secondary-foreground: #F5E6C4;
+  --muted: #1A1A17;
+  --muted-foreground: oklch(0.82 0.04 80 / 0.7);
+  --accent: #1A1A17;
+  --accent-foreground: #F5E6C4;
+  --destructive: oklch(0.65 0.2 25);
+  --destructive-foreground: #F5E6C4;
+  --border: oklch(0.92 0.04 85 / 0.18);
+  --input: oklch(0.92 0.04 85 / 0.2);
+  --ring: #F5E6C4;
+}
+
+.dark {
+  --background: #0F1626;
+  --foreground: #F5E6C4;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html, body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+  }
+}
+
+@utility hairline {
+  border: 1px solid color-mix(in oklab, var(--gold) 25%, transparent);
+}
+
+@utility gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, color-mix(in oklab, var(--gold) 60%, transparent), transparent);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 0.9s ease-out forwards;
+}
+.fade-in-delay-1 { animation-delay: 0.15s; }
+.fade-in-delay-2 { animation-delay: 0.3s; }
+.fade-in-delay-3 { animation-delay: 0.45s; }
+.fade-in-delay-4 { animation-delay: 0.6s; }
